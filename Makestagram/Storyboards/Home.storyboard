@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ePF-4w-DOO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="I83-3l-ThZ">
+            <objects>
+                <viewController id="pG8-iD-PfI" customClass="HomeViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pAe-Ou-Ok0"/>
+                        <viewControllerLayoutGuide type="bottom" id="DgE-4Y-dXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eyr-rC-JFq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ape-k9-hfQ">
+                                <rect key="frame" x="16" y="64" width="343" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostImageCell" id="Xhv-fb-vyx">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xhv-fb-vyx" id="vjE-fs-caF">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pG8-iD-PfI" id="AOR-rf-ZML"/>
+                                    <outlet property="delegate" destination="pG8-iD-PfI" id="YJ0-Ee-es8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ape-k9-hfQ" firstAttribute="leading" secondItem="eyr-rC-JFq" secondAttribute="leadingMargin" id="KeP-LS-UMg"/>
+                            <constraint firstItem="ape-k9-hfQ" firstAttribute="top" secondItem="pAe-Ou-Ok0" secondAttribute="bottom" id="m3Q-EH-Tmj"/>
+                            <constraint firstItem="DgE-4Y-dXZ" firstAttribute="top" secondItem="ape-k9-hfQ" secondAttribute="bottom" id="qDk-Oz-QdV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ape-k9-hfQ" secondAttribute="trailing" id="sn1-mS-GK0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zbq-Fu-Jwg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ikf-qD-r83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="-590"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tmZ-zb-dSl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ePF-4w-DOO" customClass="HomeViewController" customModule="Makestagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab_home_black.png" id="bYg-nS-l4V">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SjG-9q-Lri">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pG8-iD-PfI" kind="relationship" relationship="rootViewController" id="QhA-dQ-5QV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaz-W8-0Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16.800000000000001" y="-589.65517241379314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home_black.png" width="25" height="25"/>
+    </resources>
+</document>
