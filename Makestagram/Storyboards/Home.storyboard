@@ -36,8 +36,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="pG8-iD-PfI" id="AOR-rf-ZML"/>
-                                    <outlet property="delegate" destination="pG8-iD-PfI" id="YJ0-Ee-es8"/>
+                                    <outlet property="dataSource" destination="pG8-iD-PfI" id="UVh-Hi-nNR"/>
+                                    <outlet property="delegate" destination="pG8-iD-PfI" id="YH3-yt-8NE"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zbq-Fu-Jwg"/>
+                    <connections>
+                        <outlet property="tableView" destination="ape-k9-hfQ" id="6ER-nv-nIZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikf-qD-r83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
